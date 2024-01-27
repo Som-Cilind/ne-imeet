@@ -1,0 +1,44 @@
+.стол {
+  background-image: url("../images/СТОООООООООД\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.players {
+  background-color: rgba(84, 237, 186, 0.407);
+  width: 900px;
+  height: 600px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.players_little {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.чиловек {
+  width: 120.000000000000000000001px;
+}
+
+.mic {
+  width: 90px;
+}
+
+.пухлый {
+  top: 60vh;
+  position: absolute;
+}
+.menu {
+  background-color: rgb(187, 196, 196);
+  width: 150px;
+  height: 250px;
+  right: 0px;
+  position: absolute;
+  top: 0px;
+}
