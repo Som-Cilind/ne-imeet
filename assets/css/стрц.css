@@ -42,3 +42,17 @@
   position: absolute;
   top: 0px;
 }
+
+.prof{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;  
+}
+
+.profession{
+
+}
+
+.вопрос{
+
+}
