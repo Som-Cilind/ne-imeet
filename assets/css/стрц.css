@@ -35,12 +35,15 @@
   position: absolute;
 }
 .menu {
-  background-color: rgb(187, 196, 196);
-  width: 150px;
-  height: 250px;
+  background-color: rgba(96, 111, 102, 0.823);
+  /* width: 270px; */
+  height:250.1px;
   right: 0px;
   position: absolute;
   top: 0px;
+  padding: 15px;
+  color: #50b345;
+  
 }
 
 .prof{

@@ -1,3 +1,21 @@
+import prof from './massivs/profession.js'
+import { diseas } from './massivs/disease.js';
+import { fobia } from './massivs/fobia.js';
+
+function Random(max) {
+    return Math.floor(Math.random()*max)
+}
+//.
+//.
+//.
+//.
+//.
+//.
+//.
+//.
+//.
+//.
+//.
 let игроки = document.querySelector('.players')
 
 let widthLine = 90
@@ -41,66 +59,27 @@ let players2 = document.querySelector(".menu")
 console.log(players1);
 
 let mas_player = [
- {
-prof:"povar",
-fobia:"spider",
-hobby:"beysball",
-weakness:"ice-cream",
- } ,
- {
-  prof:"office-manager",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"major in police",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"arbuz",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"ufolog",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"bobr curva",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"kapibara",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
- {
-  prof:"braaaaaaaaaaah",
-  fobia:"spider",
-  hobby:"beysball",
-  weakness:"ice-cream",
-   } ,
 ]
+
+for (let i = 0; i < 8; i++) {
+mas_player.push( {
+  prof:prof[Random(prof.length)],
+  fobia:(Random(4)!=1)? fobia[Random(fobia.length)]:"да как так то а",
+  hobby:"beysnmjkll",
+  weakness: (Random(4)!=3)? diseas[Random(diseas.length)]:"боги милосердны😒",
+   },)  
+}
 
 players1.forEach((element,i) => {
   element.onclick = function () {
     players2.innerHTML = `
     <div class="prof">      <h2 class="profession">Профессия ${mas_player[i].prof}</h2>
       <img class="вопрос" src="./assets/images/гласоване/question-mark.svg" alt="" /></div>
-      <div class="prof">      <h2 class="profession">Слабости</h2>
+      <div class="prof">      <h2 class="profession">Болезни ${mas_player[i].weakness}</h2>
         <img class="вопрос" src="./assets/images/гласоване/question-mark.svg" alt="" /></div>
-        <div class="prof">      <h2 class="profession">Страхи</h2>
+        <div class="prof">      <h2 class="profession">Страхи ${mas_player[i].fobia}</h2>
           <img class="вопрос" src="./assets/images/гласоване/check-mark.svg" alt="" /></div>
-          <div class="prof">      <h2 class="profession">Навыки</h2>
+          <div class="prof">      <h2 class="profession">Навыки ${mas_player[i].hobby}</h2>
             <img class="вопрос" src="./assets/images/гласоване/question-mark.svg" alt="" /></div>
 `
   }
